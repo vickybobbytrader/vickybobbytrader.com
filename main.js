@@ -25,7 +25,7 @@ const courses = [
     url: "#",
     title: "Swing Trading with Maths Calculation Course",
     category: "Course",
-    thumbnail: "images/course.png",
+    thumbnail: "images/course3.png",
     description: "Learn Swing Trading Strategy.",
     price: "coming soon",
     isLocked: true, 
