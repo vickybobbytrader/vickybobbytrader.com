@@ -238,13 +238,7 @@
 
         weekCards.forEach(card => {
           const weekId = parseInt(card.id.split('-')[1]);
-          if (weekId === 12) { // Enable Week 1 for testing
-          card.classList.remove('locked');
-          card.classList.add('unlocked');
-          card.querySelector('p').textContent = 'Click to start';
-          card.querySelector('.icon').classList.replace('fa-lock', 'fa-unlock');
-        }
-          else if (weekId === currentWeek && dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday
+           if (weekId === currentWeek && dayOfWeek >= 1 && dayOfWeek <= 5) { // Monday to Friday
             card.classList.remove('locked');
             card.classList.add('unlocked');
             card.querySelector('p').textContent = 'Click to start';
