@@ -359,8 +359,9 @@ ul {
   const unlockTime = 15.5; // 3:30 PM in 24-hour time format (15.5)
 
   function checkUnlockStatus() {
-    const currentTime =1535;// new Date().getHours() + new Date().getMinutes() / 60; // Get current time in hours and minutes
-    const currentDay = 2;//new Date().getDay(); // Get current day (0: Sunday, 1: Monday, ...)
+    const currentTime =new Date().getHours() + new Date().getMinutes() / 60; // Get current time in hours and minutes
+    const currentDay = new Date().getDay(); // Get current day (0: Sunday, 1: Monday, ...)
+
 
     weekCards.forEach((card, index) => {
       const cardDay = index + 1; // Monday is 1, Tuesday is 2, etc.
