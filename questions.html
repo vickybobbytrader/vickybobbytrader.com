@@ -168,7 +168,6 @@
 
         // Get form values
         const name = document.getElementById('name-1').value;
-        const email = document.getElementById('email-1').value;
         const q1 = document.querySelector('input[name="q1-1"]:checked').value;
         const comments = document.getElementById('comments-1').value;
         const file = document.getElementById('screenshot-1').files[0];
@@ -184,7 +183,6 @@
           const newRef = push(newDataRef);
           await set(newRef, {
             name: name,
-            email: email,
             question1: q1,
             comments: comments,
             screenshotUrl: fileUrl,
@@ -200,7 +198,7 @@
           // Hide the message after 3 seconds and redirect
           setTimeout(() => {
             submissionMessage.style.display = 'none';
-            window.location.href = 'week.html';
+            window.location.href = 'week2.html';
           }, 3000);
         } catch (e) {
           console.error("Error submitting data:", e);
@@ -238,10 +236,8 @@
             <label for="name-1">Name:</label>
             <input type="text" id="name-1" name="name" required>
 
-            <label for="email-1">Email:</label>
-            <input type="email" id="email-1" name="email" required>
 
-            <label>Did you take only two trade today?</label>
+            <label>Did you take only one trade today?</label>
             <div class="radio-group">
               <input type="radio" id="q1-yes-1" name="q1-1" value="yes" required>
               <label for="q1-yes-1">Yes</label>
