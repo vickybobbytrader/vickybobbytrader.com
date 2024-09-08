@@ -249,8 +249,7 @@
             card.querySelector('p').textContent = 'Locked';
             card.querySelector('.icon').classList.replace('fa-unlock', 'fa-lock');
           } else if (weekId < currentWeek) {
-            card.classList.add('locked');
-            card.classList.remove('unlocked');
+            card.classList.add('unlocked');
             card.querySelector('p').textContent = 'Completed';
             card.querySelector('.icon').classList.replace('fa-lock', 'fa-check');
           } else {
